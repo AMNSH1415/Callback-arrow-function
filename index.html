@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Question no.01</h1>
+    <h3>Create a calculator using arrow functions for addition, subtraction, multiplication, and division.</h3>
+    
+    <h1>Question no.02</h1>
+    <h3> Create a function that accepts an arrow function as a callback and displays the result of multiplying two numbers.</h3>
+
+    <h1>Question no.03</h1>
+    <h3>Create a function that checks a student's marks using a callback:
+- Marks 40 or above: Passed.
+- Marks below 40: Failed.</h3>
+  
+
+    <script>
+// QUESTION NO. 02
+    let add = (a, b) => {
+        console.log("Addition:", a + b);
+    };
+
+    let subtract = (a, b) => {
+        console.log("Subtraction:", a - b);
+    };
+
+    let multiply = (a, b) => {
+        console.log("Multiplication:", a * b);
+    };
+
+    let divide = (a, b) => {
+        console.log("Division:", a / b);
+    };
+    add(10, 10);
+    subtract(10, 5);
+    multiply(10, 10);
+    divide(10, 10);
+
+// QUESTION NO. 02
+
+    let calculate = (a,b, callback) =>{
+        let result = a * b
+        callback(result)
+    }
+    calculate(20, 20, function(show){
+        console.log(show);
+    })
+
+// QUESTION NO. 02
+    let marks = prompt("Enter your marks");
+    
+    function checkresult(marks, callback) {
+        let result;
+        if (marks >= 40) {
+        result = "Passed";
+    }
+    else {
+        result = "Failed";
+    }
+    callback(result);
+    }
+    checkresult(marks, function(result) {
+    console.log("Student Result:", result);
+});
+
+    </script>
+</body>
+</html>
